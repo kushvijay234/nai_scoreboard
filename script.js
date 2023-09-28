@@ -139,3 +139,47 @@ ipponButtonBlack.addEventListener("click", function () {
     // Update the point value with the new value
     blackPlayerPoint2.textContent = currentPoint.toString();
 });
+
+
+/*
+* Yellow Player plus Mins button
+*
+*/
+// Get references to the elements
+const yellowMinsButton = document.querySelector(".yellow-mins");
+const yellowPlusButton = document.querySelector(".yellow-plus");
+
+// Add click event listeners for decrementing and incrementing points
+yellowMinsButton.addEventListener("click", function () {
+    let currentPoint = parseInt(yellowPlayerPoint.textContent);
+    currentPoint -= 1;
+    yellowPlayerPoint.textContent = currentPoint.toString();
+});
+
+yellowPlusButton.addEventListener("click", function () {
+    let currentPoint = parseInt(yellowPlayerPoint.textContent);
+    currentPoint += 1;
+    yellowPlayerPoint.textContent = currentPoint.toString();
+});
+
+
+/*
+* Black Player plus Mins button
+*
+*/
+// Get references to the elements
+const blackMinsButton = document.querySelector(".black-mins");
+const blackPlusButton = document.querySelector(".black-plus");
+
+// Add click event listeners for decrementing and incrementing points
+blackMinsButton.addEventListener("click", function () {
+    let currentPoint = parseInt(blackPlayerPoint.textContent);
+    currentPoint -= 1;
+    blackPlayerPoint.textContent = currentPoint.toString();
+});
+
+blackPlusButton.addEventListener("click", function () {
+    let currentPoint = parseInt(blackPlayerPoint.textContent);
+    currentPoint += 1;
+    blackPlayerPoint.textContent = currentPoint.toString();
+});
