@@ -183,3 +183,6 @@ blackPlusButton.addEventListener("click", function () {
     currentPoint += 1;
     blackPlayerPoint.textContent = currentPoint.toString();
 });
+
+
+

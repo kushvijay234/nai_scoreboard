@@ -111,6 +111,27 @@ h1#black-player-point {
     margin-bottom: 1%;
     font-weight: bold;
 }
+.cblack-mins {
+    color: #ffffff;
+    width: 10%;
+    background-color: #f00404;
+    border: none;
+    font-size: 23px;
+    border-radius: 10px;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+.cblack-plus {
+    color: #ffffff;
+    width: 10%;
+    background-color: #f00404;
+    border: none;
+    font-size: 23px;
+    border-radius: 10px;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
 
 .black-mins {
     color: #ffffff;
@@ -172,4 +193,17 @@ form#keikoku {
 .black-tick-option {
     position: relative;
     top: 7%;
+}
+.clock-player-plus-btn {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -40%;
+    left: -66%;
+    align-content: flex-start;
+    align-items: flex-end;
+}
+
+h2.tick-title {
+    font-size: 2rem;
 }
