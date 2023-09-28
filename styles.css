@@ -1,0 +1,44 @@
+.col-12.col-md-6.col-yellow.text-white {
+    background-color: #ffff03b3;
+}
+.col-12.col-md-6.col-black.text-white {
+    background-color: black;
+}
+
+.row.clock {
+        position: relative;
+        left: 543px;
+        top: -416px;
+}
+span#count {
+    display: none;
+}
+div#time {
+    background-color: white;
+    padding: 0% 4%;
+    color: black;
+    font-weight: bold;
+    font-size: 10vh;
+    border-radius: 5%;
+}
+button#start {
+    background-color: red;
+    color: white;
+    font-size: 3vh;
+}
+
+button#stop {
+    background-color: red;
+    color: white;
+    font-size: 3vh;
+}
+
+button#reset {
+    background-color: red;
+    color: white;
+    font-size: 3vh;
+}
+div#buttons {
+    margin-left: 2%;
+    margin-top: 1%;
+}
