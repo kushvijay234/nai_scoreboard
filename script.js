@@ -76,3 +76,66 @@ function stopWatch() {
 		setTimeout(stopWatch, 10);
 	}
 }
+
+
+
+/*
+* Yellow Player
+*
+*/
+// Get a reference to the IPPON button and the yellow-player-point element
+const ipponButton = document.getElementById("ippon-yellow");
+const yellowPlayerPoint = document.getElementById("yellow-player-point");
+
+// Add a click event listener to the IPPON button
+ipponButton.addEventListener("click", function () {
+    // Get the current point value, convert it to a number, and increment by 1
+    let currentPoint = parseInt(yellowPlayerPoint.textContent);
+    currentPoint += 2;
+
+    // Update the point value with the new value
+    yellowPlayerPoint.textContent = currentPoint.toString();
+});
+
+ // Get a reference to the waza-ari button and the yellow-player-point element
+ const wazaariButton = document.getElementById("waza-ari-yellow");
+ const yellowPlayerPoint2 = document.getElementById("yellow-player-point");
+ wazaariButton.addEventListener("click", function () {
+    // Get the current point value, convert it to a number, and increment by 1
+    let currentPoint = parseInt(yellowPlayerPoint2.textContent);
+    currentPoint += 1;
+
+    // Update the point value with the new value
+    yellowPlayerPoint2.textContent = currentPoint.toString();
+});
+
+
+/*
+* Black Player
+*
+*/
+// Get a reference to the IPPON button and the black-player-point element
+const ipponButtonBlack = document.getElementById("ippon-black");
+const blackPlayerPoint = document.getElementById("black-player-point");
+
+// Add a click event listener to the IPPON button
+ipponButtonBlack.addEventListener("click", function () {
+    // Get the current point value, convert it to a number, and increment by 1
+    let currentPoint = parseInt(blackPlayerPoint.textContent);
+    currentPoint += 2;
+
+    // Update the point value with the new value
+    blackPlayerPoint.textContent = currentPoint.toString();
+});
+
+ // Get a reference to the waza-ari button and the yellow-player-point element
+ const wazaariButtonBlack = document.getElementById("waza-ari-black");
+ const blackPlayerPoint2 = document.getElementById("black-player-point");
+ wazaariButtonBlack.addEventListener("click", function () {
+    // Get the current point value, convert it to a number, and increment by 1
+    let currentPoint = parseInt(blackPlayerPoint2.textContent);
+    currentPoint += 1;
+
+    // Update the point value with the new value
+    blackPlayerPoint2.textContent = currentPoint.toString();
+});

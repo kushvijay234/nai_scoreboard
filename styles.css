@@ -1,44 +1,90 @@
 .col-12.col-md-6.col-yellow.text-white {
-    background-color: #ffff03b3;
+background-color: #ffff03b3;
 }
+
 .col-12.col-md-6.col-black.text-white {
-    background-color: black;
+background-color: black;
 }
 
 .row.clock {
-        position: relative;
-        left: 543px;
-        top: -416px;
+position: relative;
+left: 38%;
+    top: -452px;
 }
+
 span#count {
-    display: none;
+display: none;
 }
+
 div#time {
-    background-color: white;
+background-color: white;
     padding: 0% 4%;
     color: black;
     font-weight: bold;
-    font-size: 10vh;
+font-size: 15vh;
     border-radius: 5%;
 }
+
 button#start {
-    background-color: red;
+background-color: red;
     color: white;
     font-size: 3vh;
 }
 
 button#stop {
-    background-color: red;
+background-color: red;
     color: white;
     font-size: 3vh;
 }
 
 button#reset {
-    background-color: red;
+background-color: red;
     color: white;
     font-size: 3vh;
 }
+
 div#buttons {
-    margin-left: 2%;
-    margin-top: 1%;
+margin: 2% 12%;
+}
+
+h1#yellow-player-point {
+    position: relative;
+    top: 16%;
+    left: 25%;
+    font-size: 39vh;
+    color: #000000;
+}
+
+h1#black-player-point {
+    position: relative;
+    top: 16%;
+    left: -24%;
+    text-align: right;
+    font-size: 39vh;
+    color: #ffff03b3;
+}
+
+.point-button {
+    background-color: #090689;
+    color: #ffffff;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.yellow-player-ptn-btn {
+    position: relative;
+    left: 23%;
+    top: 13%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.black-player-ptn-btn {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    right: 23%;
+    top: 13%;
 }
