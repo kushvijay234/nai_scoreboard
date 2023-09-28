@@ -150,3 +150,26 @@ h1#black-player-point {
     right: 10%;
     top: -20%;
 }
+form#chui {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+
+form#keikoku {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.yellow-tick-option {
+    position: relative;
+    top: 7%;
+}
+
+.black-tick-option {
+    position: relative;
+    top: 7%;
+}
