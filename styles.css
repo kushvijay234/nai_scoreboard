@@ -87,8 +87,8 @@ h1#black-player-point {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    right: 23%;
-    top: 13%;
+    right: 23vh;
+    top: 13vh;
 }
 .yellow-mins {
     color: #ffffff;
