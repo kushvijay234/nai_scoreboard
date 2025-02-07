@@ -5,11 +5,13 @@ background-color: #ffff03b3;
 .col-12.col-md-6.col-black.text-white {
 background-color: black;
 }
-
+.container-fluid {
+    position: fixed;
+}
 .row.clock {
 position: relative;
 left: 38%;
-    top: -452px;
+top: -70vh;
 }
 
 span#count {
