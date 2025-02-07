@@ -9,18 +9,18 @@ let minute = 0, second = 0, count = 0;
 let timer = false;
 
 startBtn.addEventListener('click', function () { 
-    if (!timer) { // Prevent multiple clicks
+    if (!timer) { // 🔹 Prevent multiple clicks 🔹
         timer = true; 
         stopWatch(); 
-        startBtn.disabled = true; // Disable start button after first click
-        stopBtn.disabled = false; // Enable stop button when started
+        startBtn.disabled = true; // 🔹 Disable start button after first click 🔹
+        stopBtn.disabled = false; // 🔹 Enable stop button when started 🔹
     }
 }); 
 
 stopBtn.addEventListener('click', function () { 
     timer = false; 
-    startBtn.disabled = false; // Allow restart without reset
-    stopBtn.disabled = true;  // Disable stop after stopping
+    startBtn.disabled = false; // 🔹 Allow restart without reset 🔹
+    stopBtn.disabled = true;  // 🔹 Disable stop after stopping 🔹
 }); 
 
 resetBtn.addEventListener('click', function () { 
@@ -31,8 +31,8 @@ resetBtn.addEventListener('click', function () {
     document.getElementById('min').innerHTML = "00"; 
     document.getElementById('sec').innerHTML = "00"; 
     document.getElementById('count').innerHTML = "00"; 
-    startBtn.disabled = false; // Enable start button on reset
-    stopBtn.disabled = true;  // Disable stop button after reset
+    startBtn.disabled = false; // 🔹 Enable start button on reset 🔹
+    stopBtn.disabled = true;  // 🔹 Disable stop button after reset 🔹
 }); 
 
 function stopWatch() { 
@@ -61,85 +61,56 @@ function stopWatch() {
     } 
 }
 
-
-
-
-
 /*
 * Yellow Player
-*
-*/
-// Get a reference to the IPPON button and the yellow-player-point element
-const ipponButton = document.getElementById("ippon-yellow");
+*/ 
 const yellowPlayerPoint = document.getElementById("yellow-player-point");
+const ipponButtonYellow = document.getElementById("ippon-yellow");
+const wazaariButtonYellow = document.getElementById("waza-ari-yellow");
 
-// Add a click event listener to the IPPON button
-ipponButton.addEventListener("click", function () {
-    // Get the current point value, convert it to a number, and increment by 1
+ipponButtonYellow.addEventListener("click", function () {
     let currentPoint = parseInt(yellowPlayerPoint.textContent);
     currentPoint += 2;
-
-    // Update the point value with the new value
     yellowPlayerPoint.textContent = currentPoint.toString();
 });
 
- // Get a reference to the waza-ari button and the yellow-player-point element
- const wazaariButton = document.getElementById("waza-ari-yellow");
- const yellowPlayerPoint2 = document.getElementById("yellow-player-point");
- wazaariButton.addEventListener("click", function () {
-    // Get the current point value, convert it to a number, and increment by 1
-    let currentPoint = parseInt(yellowPlayerPoint2.textContent);
+wazaariButtonYellow.addEventListener("click", function () {
+    let currentPoint = parseInt(yellowPlayerPoint.textContent);
     currentPoint += 1;
-
-    // Update the point value with the new value
-    yellowPlayerPoint2.textContent = currentPoint.toString();
+    yellowPlayerPoint.textContent = currentPoint.toString();
 });
-
 
 /*
 * Black Player
-*
-*/
-// Get a reference to the IPPON button and the black-player-point element
-const ipponButtonBlack = document.getElementById("ippon-black");
+*/ 
 const blackPlayerPoint = document.getElementById("black-player-point");
+const ipponButtonBlack = document.getElementById("ippon-black");
+const wazaariButtonBlack = document.getElementById("waza-ari-black");
 
-// Add a click event listener to the IPPON button
 ipponButtonBlack.addEventListener("click", function () {
-    // Get the current point value, convert it to a number, and increment by 1
     let currentPoint = parseInt(blackPlayerPoint.textContent);
     currentPoint += 2;
-
-    // Update the point value with the new value
     blackPlayerPoint.textContent = currentPoint.toString();
 });
 
- // Get a reference to the waza-ari button and the yellow-player-point element
- const wazaariButtonBlack = document.getElementById("waza-ari-black");
- const blackPlayerPoint2 = document.getElementById("black-player-point");
- wazaariButtonBlack.addEventListener("click", function () {
-    // Get the current point value, convert it to a number, and increment by 1
-    let currentPoint = parseInt(blackPlayerPoint2.textContent);
+wazaariButtonBlack.addEventListener("click", function () {
+    let currentPoint = parseInt(blackPlayerPoint.textContent);
     currentPoint += 1;
-
-    // Update the point value with the new value
-    blackPlayerPoint2.textContent = currentPoint.toString();
+    blackPlayerPoint.textContent = currentPoint.toString();
 });
 
-
 /*
-* Yellow Player plus Mins button
-*
-*/
-// Get references to the elements
+* Yellow Player plus Minus button (🔹 Prevent Negative Values 🔹)
+*/ 
 const yellowMinsButton = document.querySelector(".yellow-mins");
 const yellowPlusButton = document.querySelector(".yellow-plus");
 
-// Add click event listeners for decrementing and incrementing points
 yellowMinsButton.addEventListener("click", function () {
     let currentPoint = parseInt(yellowPlayerPoint.textContent);
-    currentPoint -= 1;
-    yellowPlayerPoint.textContent = currentPoint.toString();
+    if (currentPoint > 0) { // 🔹 Prevent going negative 🔹
+        currentPoint -= 1;
+        yellowPlayerPoint.textContent = currentPoint.toString();
+    }
 });
 
 yellowPlusButton.addEventListener("click", function () {
@@ -148,20 +119,18 @@ yellowPlusButton.addEventListener("click", function () {
     yellowPlayerPoint.textContent = currentPoint.toString();
 });
 
-
 /*
-* Black Player plus Mins button
-*
-*/
-// Get references to the elements
+* Black Player plus Minus button (🔹 Prevent Negative Values 🔹)
+*/ 
 const blackMinsButton = document.querySelector(".black-mins");
 const blackPlusButton = document.querySelector(".black-plus");
 
-// Add click event listeners for decrementing and incrementing points
 blackMinsButton.addEventListener("click", function () {
     let currentPoint = parseInt(blackPlayerPoint.textContent);
-    currentPoint -= 1;
-    blackPlayerPoint.textContent = currentPoint.toString();
+    if (currentPoint > 0) { // 🔹 Prevent going negative 🔹
+        currentPoint -= 1;
+        blackPlayerPoint.textContent = currentPoint.toString();
+    }
 });
 
 blackPlusButton.addEventListener("click", function () {
@@ -169,6 +138,3 @@ blackPlusButton.addEventListener("click", function () {
     currentPoint += 1;
     blackPlayerPoint.textContent = currentPoint.toString();
 });
-
-
-
