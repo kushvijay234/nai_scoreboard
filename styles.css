@@ -10,8 +10,10 @@ background-color: black;
 }
 .row.clock {
 position: relative;
-left: 38%;
+left: 31%;
 top: -70vh;
+display: flex;
+justify-content: center;
 }
 
 span#count {
@@ -71,7 +73,7 @@ h1#black-player-point {
     color: #ffffff;
     padding: 1% 2%;
     border: none;
-    border-radius: 6px;
+    border-radius: 6%;
     font-weight: bold;
 }
 
@@ -208,4 +210,10 @@ form#keikoku {
 
 h2.tick-title {
     font-size: 2rem;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    transform: scale(1.7); /* Increase size */
+    margin-right: 5px; /* Adjust spacing */
 }
